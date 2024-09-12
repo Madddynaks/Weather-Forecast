@@ -1,5 +1,5 @@
 // Open-Meteo API URLs
-const API_BASE_URL = '';
+const API_BASE_URL = 'YOUR_API_KEY';
 const API_PARAMS = "daily=temperature_2m_max,temperature_2m_min,precipitation_sum,windspeed_10m&timezone=auto";
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Get city coordinates using OpenCage Geocoding API
     function getCityCoordinates(cityName) {
-        const geocodeAPI = `https://api.opencagedata.com/geocode/v1/json?q=${cityName}&key=1279b62798c54bf5bcca7dff5fa3b8c3`;
+        const geocodeAPI = `https://api.opencagedata.com/geocode/v1/json?q=${cityName}&key=YOUR_API_KEY`;
 
         return fetch(geocodeAPI)
             .then(response => response.json())
